@@ -1,0 +1,33 @@
+<div class="container">
+  <lib-scoreboard></lib-scoreboard>
+
+  <div class="d-flex justify-content-around mb-2 mt-2 input-group">
+    <input type="text" class="form-control" name="matchCode" id="matchCode" placeholder="Match Code" [(ngModel)]="newMatch.code">
+    <input type="text" class="form-control" name="townTeam" id="townTeam" placeholder="Town Team Name" [(ngModel)]="newMatch.homeTeam.name">
+    <input type="text" class="form-control" name="awayTeam" id="awayTeam" placeholder="Away Team Name" [(ngModel)]="newMatch.awayTeam.name">
+    <div class="input-group-append">
+      <button class="btn btn-primary" (click)="addMatch()">Start Match</button>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-around mb-2 input-group">
+    <input type="text" class="form-control" name="matchCode" id="matchCode" placeholder="Match Code" [(ngModel)]="updateMatch.code">
+
+    <!-- <input type="text" class="form-control" name="townTeam" id="townTeam" placeholder="Team Name" [(ngModel)]="updateMatch.teamCode"> -->
+    <select name="teamCode" class="form-control" id="teamCode" [(ngModel)]="updateMatch.team">
+      <option value="" disabled>Team Name</option>
+      <option *ngFor="let team of dropdown" value="{{team.value}}">{{team.name}}</option>
+    </select>
+    <input type="text" class="form-control" name="awayTeam" id="awayTeam" placeholder="New Score" [(ngModel)]="updateMatch.goals">
+    <div class="input-group-append">
+      <button class="btn btn-primary" (click)="updateMatchScore()">Update Score</button>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-around input-group">
+    <input type="text" class="form-control" name="matchCode" id="matchCode" placeholder="Match Code" [(ngModel)]="finishCode.code">
+    <div class="input-group-append">
+      <button class="btn btn-primary" (click)="finishMatch()">Finish Match</button>
+    </div>
+  </div>
+</div>

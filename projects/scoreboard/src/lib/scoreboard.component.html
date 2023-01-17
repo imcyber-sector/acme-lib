@@ -1,0 +1,39 @@
+<div class="container">
+  <div *ngIf="data.length" class="flex flex-direction jc-around">
+    <div class="w-40 m-0 p-0">
+      <h4>Score :</h4>
+      <table>
+        <thead class="bg-gray">
+          <th class="w-50 text-center">Home Team</th>
+          <th class="w-50 text-center">Away Team</th>
+        </thead>
+        <tbody *ngFor="let score of data">
+          <tr>
+            <td class="text-center">{{score?.homeTeam?.name}} ({{score?.homeTeam?.goals}})</td>
+            <td class="text-center">{{score?.awayTeam?.name}} ({{score?.awayTeam?.goals}})</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="w-40 m-0 p-0">
+      <h4>Summary :</h4>
+      <table>
+        <thead class="bg-gray">
+          <th class="w-50 text-center">Home Team</th>
+          <th class="w-50 text-center">Away Team</th>
+        </thead>
+        <tbody *ngFor="let score of summaryArr">
+          <tr>
+            <td class="text-center">{{score?.homeTeam?.name}} ({{score?.homeTeam?.goals}})</td>
+            <td class="text-center">{{score?.awayTeam?.name}} ({{score?.awayTeam?.goals}})</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div *ngIf="errorMsg.length">
+    <p class="highlight text-center">{{errorMsg}}</p>
+  </div>
+</div>
