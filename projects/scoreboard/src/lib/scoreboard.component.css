@@ -58,6 +58,10 @@ tr:nth-child(even) {
   margin: auto;
 }
 
+.capitalize{
+  text-transform: capitalize;
+}
+
 @media (max-width: 576px) {
   .w-40 {
     width: 90%

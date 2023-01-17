@@ -9,8 +9,8 @@
         </thead>
         <tbody *ngFor="let score of data">
           <tr>
-            <td class="text-center">{{score?.homeTeam?.name}} ({{score?.homeTeam?.goals}})</td>
-            <td class="text-center">{{score?.awayTeam?.name}} ({{score?.awayTeam?.goals}})</td>
+            <td class="text-center capitalize">{{score?.homeTeam?.name}} ({{score?.homeTeam?.goals}})</td>
+            <td class="text-center capitalize">{{score?.awayTeam?.name}} ({{score?.awayTeam?.goals}})</td>
           </tr>
         </tbody>
       </table>
@@ -25,8 +25,8 @@
         </thead>
         <tbody *ngFor="let score of summaryArr">
           <tr>
-            <td class="text-center">{{score?.homeTeam?.name}} ({{score?.homeTeam?.goals}})</td>
-            <td class="text-center">{{score?.awayTeam?.name}} ({{score?.awayTeam?.goals}})</td>
+            <td class="text-center capitalize">{{score?.homeTeam?.name}} ({{score?.homeTeam?.goals}})</td>
+            <td class="text-center capitalize">{{score?.awayTeam?.name}} ({{score?.awayTeam?.goals}})</td>
           </tr>
         </tbody>
       </table>
